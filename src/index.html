@@ -3,12 +3,95 @@
   <head>
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root">
-      <h1>Hola mundo!</h1>
-    </div>
+    <!-- Header de la página web, incluye logo y el menú de inicio e instrucciones-->
+    <header style="display: flex">
+      <!--Logo del header-->
+      <img src="images/TextSecureSmall.png" class="logo">
+        <nav>
+          <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li>Instrucciones</li>
+          </ul>
+        </nav>
+    </header>
+
+    <!--PANTALA DE INICIO-->
+    <!--Hero Banner de lapágina de inicio, incluye una imagen y un texto-->
+    <section class="heroBanner" id="heroBanner" style="display: block">
+        <div class="textHeroBanner">
+        <h1>Bienvenido a TextSecure, empieza a comunicarte con tus coworkers bajo el mismo código, en 3 simples pasos.</h1>        
+        </div>
+    </section>
+
+    <!--"Como funciona" en la página de inicio-->
+    <section class="instructions" id="instructions" style="display: grid">
+      <!--PASO 1-->
+      <!--Imagen Paso 1-->
+      <div class="imgFirstStep">
+        <img src="images/Ceasar.png">
+      </div>
+      <!--Texto Paso 1-->
+      <div class="textFirstStep">
+        <h2> Paso 1: </h2>
+        <p>Selecciona un Offset o números de desplazamiento que vas a usar para tu mensaje</p>
+      </div>
+      <!--PASO 2-->
+      <!--Imagen paso 2-->
+      <div class="imgSecondStep">
+        <img src="images/Ingresa tu mensaje.jpg">
+      </div>
+      <!--Texto paso 2-->
+      <div class="textSecondStep">
+        <h2> Paso 2: </h2>
+        <p>Escribe el mensaje que quieres codificar o decodificar.</p>
+      </div>
+      <!--PASO 3-->
+      <!--Imagen paso 3-->
+      <div class="imgThirdStep">
+        <img src="images/Click.jpg">
+      </div>
+      <!--Texto paso 3-->
+      <div class="textThirdStep">
+        <h2> Paso 3: </h2>
+        <p>Haz click en la opción que deseas (codificar o decodificar), ¡Y listo, ya tienes tu mensaje de forma segura!</p>
+      </div>
+    </section>
+    
+    <!--Botón para continuar, formaliza los display de las pantallas para que aparezca la pantalla de encriptación-->
+    <section class="continueButton" id="continueButton" style="display: block">
+      <button name="continue">Continuar</button>
+    </section>
+
+    <!--PANTALLA DE ENCRIPTACIÓN-->
+    <!--Mensaje de bienvenida-->
+    <section class="welcomeMessage" id="welcomeMessage" style="display: none">
+      <h1>¡Bienvenido, puedes leer las instrucciones, o si ya sabes de que va, pues ingresa los datos necesarios y disfruta de tu mensaje secreto!</h1>
+    </section>
+    <!--Se define la sección para el cifrado-->
+    <section class="cipher" id="cipher" style="display: none">
+      <div class="offset">
+        <p>Ingresa el número de desplazamientos para tu cifrado:</p>
+        <input type="number" name="offset" id="offset" min="1" value="1">
+      </div>
+
+      <div class="encryption">
+        Mensaje a codificar o decodificar:<br/>
+        <input type="text" name="messageStart" id="messageStart" placeholder="Ingresa el mensaje a codificar o a decodificar" value="">
+        <button name="code" id="code">Codificar</button>
+        <button name="decode" id="decode">Decodificar</button>
+
+        Resultado: Tu mensaje codificado o decodificado:<br/>
+        <input type="text" name="messageEnd" placeholder="Aquí aparece tu mensaje codificado o decodificado" id="messageEnd">
+        <button name="reset">Limpiar</button>
+        <button name="copy">Copiar</button>
+      </div>
+    </section>
+
+    <!--Scripts para el funcionamiento de las páginas-->
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>

@@ -1,1 +1,68 @@
 /* Acá va tu código */
+body{
+    font-family: 'Roboto';
+    margin: 0;
+}
+img {
+    width: 100%;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*Como convención se utiliza la primera caja de referencia, y se aplica margin-bottom*/
+    margin-bottom: 64px;
+    /*Se le aplica un margin top solo por ser la primera caja*/
+    margin-top: 32px;
+    padding-left: 123px;
+    padding-right: 123px;
+    /* Otra forma: padding: 0 123px*/
+}
+.logo{
+    display: flex;
+    width: 200px;
+}
+
+
+.menu{
+    list-style: none;
+    display: flex;
+}
+
+.menu li{
+    padding: 1em;
+}
+
+.heroBanner{
+background-image: url(images/ImageHeroBanner.jpg);
+background-color: #cccccc;
+height: 368px;
+background-position: center;
+background-size: cover;
+position: relative;
+margin-bottom: 95px;
+}
+
+.textHeroBanner{
+    position: absolute;
+    bottom: 24px;
+    right: 18px;
+    width: 40%;
+    color: white;
+   
+}
+.textHeroBanner h1{
+    font-weight: normal; 
+    margin: 0;
+}
+
+.instructions{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 112px;
+    grid-column-gap: 70px;
+    grid-row-gap: 30px;
+    align-items: center;
+
+}
+
