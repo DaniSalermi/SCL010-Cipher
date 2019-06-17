@@ -108,6 +108,7 @@
 
       <div class="encryption">
         <div class="codeBox">
+          <!--Ingreso del mensaje a codificar o decodificar-->
           <div>Mensaje a codificar o decodificar:<br /></div>
           <textarea
             class="textArea"
@@ -118,11 +119,13 @@
             placeholder="Ingresa el mensaje a codificar o a decodificar"
           ></textarea>
         </div>
+        <!--Botones de codificado y decodificado-->
         <div class="cipherButtons">
           <button class="button" name="code" id="code">Codificar</button>
           <button class="button" name="decode" id="decode">Decodificar</button>
         </div>
         <div class="codeBox">
+          <!--Resultado del mensaje codificado o decodificado-->
           <div>Resultado, tu mensaje codificado o decodificado:<br /></div>
           <textarea
             class="textArea"
@@ -135,8 +138,9 @@
         </div>
       </div>
       <div class="auxButton clearButton">
-        <button class="button" name="reset">Limpiar</button>
-        <button class="button" name="copy">Copiar</button>
+        <!--Botones auxiliares para codificar y decodificar-->
+        <button class="button" id="resetButton" name="reset">Limpiar</button>
+        <button class="button" id="copyButton" name="copy">Copiar</button>
       </div>
     </section>
 
