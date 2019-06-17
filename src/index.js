@@ -18,7 +18,7 @@ document.getElementById("code").addEventListener("click", () => {
   /*Definir Offset*/
   let offsetNumber = parseInt(document.getElementById("offset").value);
   /*Input para ingresar mensaje a codificar*/
-  startMessage = document.getElementById("messageStart").value.toUpperCase();
+  startMessage = document.getElementById("messageStart").value;
   /*Impresión del mensaje final en la textarea*/
   /*Llamado a la función para codificar el mensaje desde window*/
   document.getElementById("messageEnd").value = window.cipher.encode(
