@@ -14,76 +14,29 @@ document.getElementById("continueButton").addEventListener("click", () => {
 });
 
 /*Función para codificar mensaje*/
-
 document.getElementById("code").addEventListener("click", () => {
   /*Definir Offset*/
   let offsetNumber = parseInt(document.getElementById("offset").value);
-  console.log(offsetNumber);
-
   /*Input para ingresar mensaje a codificar*/
   startMessage = document.getElementById("messageStart").value.toUpperCase();
-  if (startMessage == "") {
-    alert("Debes ingresar un mensaje a codificar");
-  } else {
-    console.log(startMessage);
-    let finalMessage = "";
-
-    for (let i = 0; i < startMessage.length; i++) {
-      console.log(startMessage[i]);
-
-      let codeAscii = startMessage.charCodeAt(i);
-      console.log(codeAscii);
-      let newCodeAscii =
-        codeAscii === 32
-          ? codeAscii
-          : ((codeAscii - 65 + offsetNumber) % 26) + 65;
-      console.log(newCodeAscii);
-      let endChar = String.fromCharCode(newCodeAscii);
-      console.log(endChar);
-      //concatenando los Char 2 maneras//
-      //finalMessage = finalMessage + endChar;//
-      finalMessage = finalMessage.concat(endChar);
-    }
-
-    console.log(finalMessage);
-
-    document.getElementById("messageEnd").value = finalMessage;
-  }
+  /*Impresión del mensaje final en la textarea*/
+  /*Llamado a la función para codificar el mensaje desde window*/
+  document.getElementById("messageEnd").value = window.cipher.encode(
+    startMessage,
+    offsetNumber
+  );
 });
 
 /*Función para decodificar mensaje*/
 document.getElementById("decode").addEventListener("click", () => {
   /*Definir Offset*/
   let offsetNumber = parseInt(document.getElementById("offset").value);
-  console.log(offsetNumber);
-
   /*Input para ingresar mensaje a decodificar*/
   startMessage = document.getElementById("messageStart").value.toUpperCase();
-  if (startMessage == "") {
-    alert("Debes ingresar un mensaje a decodificar");
-  } else {
-    console.log(startMessage);
-    let finalMessage = "";
-
-    for (let i = 0; i < startMessage.length; i++) {
-      console.log(startMessage[i]);
-
-      let codeAscii = startMessage.charCodeAt(i);
-      console.log(codeAscii);
-      let newCodeAscii =
-        codeAscii === 32
-          ? codeAscii
-          : ((codeAscii + 65 - offsetNumber) % 26) + 65;
-      console.log(newCodeAscii);
-      let endChar = String.fromCharCode(newCodeAscii);
-      console.log(endChar);
-      //concatenando los Char 2 maneras//
-      //finalMessage = finalMessage + endChar;//
-      finalMessage = finalMessage.concat(endChar);
-    }
-
-    console.log(finalMessage);
-
-    document.getElementById("messageEnd").value = finalMessage;
-  }
+  /*Impresión del mensaje final en la textarea*/
+  /*Llamado a la función para decodificar el mensaje desde window*/
+  document.getElementById("messageEnd").value = window.cipher.decode(
+    startMessage,
+    offsetNumber
+  );
 });
