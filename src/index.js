@@ -33,7 +33,10 @@ document.getElementById("code").addEventListener("click", () => {
 
       let codeAscii = startMessage.charCodeAt(i);
       console.log(codeAscii);
-      let newCodeAscii = ((codeAscii - 65 + offsetNumber) % 26) + 65;
+      let newCodeAscii =
+        codeAscii === 32
+          ? codeAscii
+          : ((codeAscii - 65 + offsetNumber) % 26) + 65;
       console.log(newCodeAscii);
       let endChar = String.fromCharCode(newCodeAscii);
       console.log(endChar);
@@ -67,7 +70,10 @@ document.getElementById("decode").addEventListener("click", () => {
 
       let codeAscii = startMessage.charCodeAt(i);
       console.log(codeAscii);
-      let newCodeAscii = ((codeAscii + 65 - offsetNumber) % 26) + 65;
+      let newCodeAscii =
+        codeAscii === 32
+          ? codeAscii
+          : ((codeAscii + 65 - offsetNumber) % 26) + 65;
       console.log(newCodeAscii);
       let endChar = String.fromCharCode(newCodeAscii);
       console.log(endChar);
