@@ -86,13 +86,14 @@ header {
 
 .welcomeMessage {
   padding: 0 123px;
+  margin-bottom: 60px;
 }
 
 .offset {
   display: flex;
   margin-bottom: 69px;
   justify-content: space-between;
-  padding: 0 130px;
+  padding: 0 280px;
 }
 
 .offsetMessage {
@@ -104,19 +105,27 @@ header {
   border: 1px solid #3bb4c1;
   border-radius: 12px;
   text-align: center;
+  margin-right: 12px;
 }
 
 .encryption {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  text-align: center;
+  grid-template-columns: 1fr 0.7fr 1fr;
+  text-align: start;
   margin-bottom: 60px;
-  align-content: space-evenly;
-  padding: 0 100px;
+  align-content: end;
+  padding: 0 123px;
+}
+
+.codeBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .textArea {
   border: 1px solid #3bb4c1;
+  border-radius: 12px;
 }
 
 .cipherButtons {
