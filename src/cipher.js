@@ -21,8 +21,10 @@ window.cipher = {
             : codeAscii >= 97 && codeAscii <= 122
             ? ((codeAscii - 97 + offsetNumber) % 26) + 97
             : codeAscii;
+        console.log(newCodeAscii);
         //Encuentro el nuevo char asociado al nuevo ASCII//
         let endChar = String.fromCharCode(newCodeAscii);
+        console.log(endChar);
         //concatenando los Char uno a uno para obtener el mensaje//
         finalMessage = finalMessage.concat(endChar);
       }
@@ -43,7 +45,9 @@ window.cipher = {
       //Se recorre todo el mensaje//
       for (let i = 0; i < startMessage.length; i++) {
         //Encuentro cada char code de cada letra//
+
         let codeAscii = startMessage.charCodeAt(i);
+        console.log(codeAscii);
         //Operador ternario: si es un espacio, me deja el espacio, sino encuentra el nuevo ASCII//
         //Nuevo ASCII se consigue con la fórmula//
         // let newCodeAscii =
@@ -69,10 +73,12 @@ window.cipher = {
             : codeAscii >= 65 && codeAscii <= 90
             ? ((codeAscii + 65 - offsetNumber) % 26) + 65
             : codeAscii >= 97 && codeAscii <= 122
-            ? ((codeAscii + 97 + offsetNumber) % 26) + 97
+            ? ((codeAscii + 111 - offsetNumber) % 26) + 97
             : codeAscii;
+        console.log(newCodeAscii);
         //Encuentro el nuevo char asociado al nuevo ASCII//
         let endChar = String.fromCharCode(newCodeAscii);
+        console.log(endChar);
         //concatenando los Char 2 maneras//
         //finalMessage = finalMessage + endChar;//
         finalMessage = finalMessage.concat(endChar);
