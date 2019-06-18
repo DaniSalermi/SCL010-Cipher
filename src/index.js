@@ -4,10 +4,26 @@
 /*Variables*/
 let startMessage = "";
 
+/*Botón Ver más*/
+document.getElementById("verMasButton").addEventListener("click", () => {
+  document.getElementById("instructions").style = "display: grid";
+  document.getElementById("verMasSection").style = "display: none";
+  document.getElementById("verMenosSection").style = "display: grid";
+});
+
+/*Botón Ver menos*/
+document.getElementById("verMenosButton").addEventListener("click", () => {
+  document.getElementById("instructions").style = "display: none";
+  document.getElementById("verMasSection").style = "display: grid";
+  document.getElementById("verMenosSection").style = "display: none";
+});
+
 /*Botón continuar*/
 document.getElementById("continueButton").addEventListener("click", () => {
   document.getElementById("heroBanner").style = "display: none";
   document.getElementById("instructions").style = "display: none";
+  document.getElementById("verMasSection").style = "display: none";
+  document.getElementById("verMenosSection").style = "display: none";
   document.getElementById("continueButton").style = "display: none";
   document.getElementById("welcomeMessage").style = "display: block";
   document.getElementById("cipher").style = "display: block";
@@ -32,7 +48,7 @@ document.getElementById("decode").addEventListener("click", () => {
   /*Definir Offset*/
   let offsetNumber = parseInt(document.getElementById("offset").value);
   /*Input para ingresar mensaje a decodificar*/
-  startMessage = document.getElementById("messageStart").value.toUpperCase();
+  startMessage = document.getElementById("messageStart").value;
   /*Impresión del mensaje final en la textarea*/
   /*Llamado a la función para decodificar el mensaje desde window*/
   document.getElementById("messageEnd").value = window.cipher.decode(
@@ -41,24 +57,12 @@ document.getElementById("decode").addEventListener("click", () => {
   );
 });
 
-// document.getElementById("copyButton").addEventListener("click", () => {
-//   // Crea un campo de texto "oculto"
-//   var aux = document.createElement("input");
+document.getElementById("copyButton").addEventListener("click", () => {
+  document.getElementById("messageEnd").select();
+  document.execCommand("copy");
+});
 
-//   // Asigna el contenido del elemento especificado al valor del campo
-//   aux.setAttribute("value", document.getElementById("messageEnd").innerHTML);
-
-//   // Añade el campo a la página
-//   document.body.appendChild(aux);
-
-//   // Selecciona el contenido del campo
-//   aux.select();
-
-//   // Copia el texto seleccionado
-//   document.execCommand("copy");
-
-//   // Elimina el campo de la página
-//   document.body.removeChild(aux);
-
-//   console.log("texto copiado");
-// });
+document.getElementById("resetButton").addEventListener("click", () => {
+  document.getElementById("messageEnd").value = "";
+  document.getElementById("messageStart").value = "";
+});

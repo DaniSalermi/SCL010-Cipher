@@ -58,6 +58,24 @@ header {
   margin: 0;
 }
 
+.verMasSection {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 0 112px;
+  grid-column-gap: 70px;
+  margin-bottom: 60px;
+  align-items: center;
+}
+
+.verMenosSection {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 0 112px;
+  grid-column-gap: 70px;
+  margin-bottom: 60px;
+  align-items: center;
+}
+
 .instructions {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -77,8 +95,10 @@ header {
   padding: 18px 24px;
   background: #048998;
   border-radius: 41px;
-  max-width: 150px;
+  max-width: 160px;
+  max-height: 70px;
 }
+
 .auxButton {
   text-align: center;
   margin-bottom: 60px;
