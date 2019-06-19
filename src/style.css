@@ -116,21 +116,21 @@ header {
 
 .offset {
   display: flex;
-  margin-bottom: 69px;
+  margin-bottom: 60px;
   justify-content: space-between;
-  padding: 0 280px;
+  padding: 0 300px;
 }
 
 .offsetMessage {
   font-family: "Roboto";
   color: #3bb4c1;
+  font-size: 20px;
 }
 
 .offsetNumber {
   border: 1px solid #3bb4c1;
   border-radius: 12px;
   text-align: center;
-  margin-right: 12px;
 }
 
 .encryption {
