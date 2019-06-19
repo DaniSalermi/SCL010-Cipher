@@ -60,16 +60,20 @@ header {
 
 .verMasSection {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 2fr 1fr;
   padding: 0 112px;
   grid-column-gap: 70px;
   margin-bottom: 60px;
   align-items: center;
 }
 
+.verMasMenosButton {
+  text-align: right;
+}
+
 .verMenosSection {
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 2fr 1fr;
   padding: 0 112px;
   grid-column-gap: 70px;
   margin-bottom: 60px;
