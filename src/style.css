@@ -102,6 +102,7 @@ header {
   border-radius: 41px;
   max-width: 200px;
   max-height: 70px;
+  cursor: pointer;
 }
 
 .auxButton {
