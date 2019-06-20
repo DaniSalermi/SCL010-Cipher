@@ -6,6 +6,8 @@ describe("cipher", () => {
     //assert.equal(a que le aplico el test. 'que debería ser');//
     assert.equal(typeof cipher, "object");
   });
+
+  //Test unitarios para ENCODE
   describe("cipher.encode", () => {
     it("debería ser una función", () => {
       assert.equal(typeof cipher.encode, "function");
@@ -16,10 +18,18 @@ describe("cipher", () => {
         "HIJKLMNOPQRSTUVWXYZABCDEFG"
       );
     });
+    it('debería retornar "hijklmnopqrstuvwxyzabcdefg" para "abcdefghijklmnopqrstuvwxyz" con offset 33', () => {
+      assert.equal(
+        window.cipher.encode("abcdefghijklmnopqrstuvwxyz", 33),
+        "hijklmnopqrstuvwxyzabcdefg"
+      );
+    });
     it('debería retornar " " para " " con cualquier offset', () => {
       assert.equal(window.cipher.encode(" ", 33), " ");
     });
   });
+
+  //Test Unitarios para DECODE
   describe("cipher.decode", () => {
     it("debería ser una función", () => {
       assert.equal(typeof cipher.decode, "function");
@@ -28,6 +38,12 @@ describe("cipher", () => {
       assert.equal(
         window.cipher.decode("HIJKLMNOPQRSTUVWXYZABCDEFG", 33),
         "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      );
+    });
+    it('debería retornar "abcdefghijklmnopqrstuvwxyz" para "hijklmnopqrstuvwxyzabcdefg" con offset 33', () => {
+      assert.equal(
+        window.cipher.decode("hijklmnopqrstuvwxyzabcdefg", 33),
+        "abcdefghijklmnopqrstuvwxyz"
       );
     });
     it('debería retornar " " para " " con cualquier offset', () => {
