@@ -60,17 +60,22 @@ header {
 
 .verMasSection {
   display: grid;
-  grid-template-columns: 70% 30%;
-  padding: 0 112px;
+  grid-template-columns: 5fr 1.5fr;
+  padding: 0 140px;
   grid-column-gap: 70px;
   margin-bottom: 60px;
   align-items: center;
 }
 
+.verMasMenosButton {
+  text-align: right;
+  max-width: 200px;
+}
+
 .verMenosSection {
   display: grid;
-  grid-template-columns: 70% 30%;
-  padding: 0 112px;
+  grid-template-columns: 5fr 1.5fr;
+  padding: 0 140px;
   grid-column-gap: 70px;
   margin-bottom: 60px;
   align-items: center;
@@ -95,8 +100,9 @@ header {
   padding: 18px 24px;
   background: #048998;
   border-radius: 41px;
-  max-width: 160px;
+  max-width: 200px;
   max-height: 70px;
+  cursor: pointer;
 }
 
 .auxButton {
@@ -111,21 +117,21 @@ header {
 
 .offset {
   display: flex;
-  margin-bottom: 69px;
+  margin-bottom: 60px;
   justify-content: space-between;
-  padding: 0 280px;
+  padding: 0 300px;
 }
 
 .offsetMessage {
   font-family: "Roboto";
   color: #3bb4c1;
+  font-size: 20px;
 }
 
 .offsetNumber {
   border: 1px solid #3bb4c1;
   border-radius: 12px;
   text-align: center;
-  margin-right: 12px;
 }
 
 .encryption {
