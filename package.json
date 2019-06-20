@@ -4,7 +4,7 @@
   "main": "src/index.html",
   "license": "MIT",
   "scripts": {
-    "start": "http-server",
+    "start": "http-server ./src",
     "htmlhint": "htmlhint src/*.html test/*.html",
     "eslint": "eslint --ext .js src/ test/",
     "pretest": "npm run eslint && npm run htmlhint",
