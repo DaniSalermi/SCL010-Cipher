@@ -35,12 +35,16 @@ document.getElementById("code").addEventListener("click", () => {
   let offsetNumber = parseInt(document.getElementById("offset").value);
   /*Input para ingresar mensaje a codificar*/
   startMessage = document.getElementById("messageStart").value;
-  /*Impresión del mensaje final en la textarea*/
-  /*Llamado a la función para codificar el mensaje desde window*/
-  document.getElementById("messageEnd").value = window.cipher.encode(
-    startMessage,
-    offsetNumber
-  );
+  if (startMessage == "") {
+    document.getElementById("errorMessageEncode").style = "display: block";
+  } else {
+    /*Impresión del mensaje final en la textarea*/
+    /*Llamado a la función para codificar el mensaje desde window*/
+    document.getElementById("messageEnd").value = window.cipher.encode(
+      startMessage,
+      offsetNumber
+    );
+  }
 });
 
 /*Función para decodificar mensaje*/
@@ -49,12 +53,18 @@ document.getElementById("decode").addEventListener("click", () => {
   let offsetNumber = parseInt(document.getElementById("offset").value);
   /*Input para ingresar mensaje a decodificar*/
   startMessage = document.getElementById("messageStart").value;
-  /*Impresión del mensaje final en la textarea*/
-  /*Llamado a la función para decodificar el mensaje desde window*/
-  document.getElementById("messageEnd").value = window.cipher.decode(
-    startMessage,
-    offsetNumber
-  );
+
+  if (startMessage == "") {
+    //Alerta para ingresar un mensaje a decodificar//
+    document.getElementById("errorMessageDecode").style = "display: block";
+  } else {
+    /*Impresión del mensaje final en la textarea*/
+    /*Llamado a la función para decodificar el mensaje desde window*/
+    document.getElementById("messageEnd").value = window.cipher.decode(
+      startMessage,
+      offsetNumber
+    );
+  }
 });
 
 document.getElementById("copyButton").addEventListener("click", () => {
@@ -65,4 +75,6 @@ document.getElementById("copyButton").addEventListener("click", () => {
 document.getElementById("resetButton").addEventListener("click", () => {
   document.getElementById("messageEnd").value = "";
   document.getElementById("messageStart").value = "";
+  document.getElementById("errorMessageEncode").style = "display: none";
+  document.getElementById("errorMessageDecode").style = "display: none";
 });

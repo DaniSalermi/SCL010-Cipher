@@ -154,6 +154,16 @@ header {
   border-radius: 12px;
 }
 
+.errorMessageEncode {
+  font-size: 11px;
+  color: #e74c3c;
+}
+
+.errorMessageDecode {
+  font-size: 11px;
+  color: #e74c3c;
+}
+
 .cipherButtons {
   display: flex;
   flex-direction: column;
