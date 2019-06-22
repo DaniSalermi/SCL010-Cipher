@@ -59,9 +59,9 @@ Ayuda a sentirte más protegido en caso de que tu seguridad se esté viendo vuln
 - [x] No utiliza `this`.
 - [x] Implementa `cipher.encode`.
 - [x] Implementa `cipher.decode`.
-- [ ] Pasa linter con configuración provista.
-- [ ] Pasa pruebas unitarias.
-- [ ] Pruebas unitarias cubren 70% de _statements_, _functions_ y _lines_, y un mínimo del 50% de _branches_.
+- [x] Pasa linter con configuración provista.
+- [x] Pasa pruebas unitarias.
+- [x] Pruebas unitarias cubren 70% de _statements_, _functions_ y _lines_, y un mínimo del 50% de _branches_.
 - [x] Interfaz permite elegir el `offset` o _desplazamiento_ a usar en el cifrado/descifrado.
 - [x] Interfaz permite escribir un texto para ser cifrado.
 - [x] Interfaz muestra el resultado del cifrado correctamente.
