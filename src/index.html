@@ -20,7 +20,6 @@
       <nav>
         <ul class="menu">
           <li><a href="index.html">Inicio</a></li>
-          <li>Instrucciones</li>
         </ul>
       </nav>
     </header>
@@ -124,15 +123,25 @@
         <p class="offsetMessage">
           Ingresa una clave de comunicación numérica secreta:
         </p>
+
         <input
           class="offsetNumber"
           type="number"
           name="offset"
           id="offset"
           min="1"
+          max="148"
           value="1"
           title="Debes definir tu clave de comunicación previamente con tu compañero"
         />
+      </div>
+
+      <div
+        class="errorMessageOffset"
+        id="errorMessageOffset"
+        style="display: none"
+      >
+        Debes ingresar un offset entre 1 y 148
       </div>
 
       <div class="encryption">

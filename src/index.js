@@ -33,17 +33,26 @@ document.getElementById("continueButton").addEventListener("click", () => {
 document.getElementById("code").addEventListener("click", () => {
   /*Definir Offset*/
   let offsetNumber = parseInt(document.getElementById("offset").value);
-  /*Input para ingresar mensaje a codificar*/
-  startMessage = document.getElementById("messageStart").value;
-  if (startMessage == "") {
-    document.getElementById("errorMessageEncode").style = "display: block";
+  if (offsetNumber > 148 || offsetNumber < 1) {
+    document.getElementById("errorMessageOffset").style = "display: flex";
   } else {
-    /*Impresión del mensaje final en la textarea*/
-    /*Llamado a la función para codificar el mensaje desde window*/
-    document.getElementById("messageEnd").value = window.cipher.encode(
-      startMessage,
-      offsetNumber
-    );
+    /*Input para ingresar mensaje a codificar*/
+    startMessage = document.getElementById("messageStart").value;
+    if (startMessage == "") {
+      document.getElementById("errorMessageOffset").style = "display: none";
+      document.getElementById("errorMessageEncode").style = "display: block";
+      document.getElementById("errorMessageDecode").style = "display: none";
+    } else {
+      /*Impresión del mensaje final en la textarea*/
+      /*Llamado a la función para codificar el mensaje desde window*/
+      document.getElementById("errorMessageOffset").style = "display: none";
+      document.getElementById("errorMessageDecode").style = "display: none";
+      document.getElementById("errorMessageEncode").style = "display: none";
+      document.getElementById("messageEnd").value = window.cipher.encode(
+        startMessage,
+        offsetNumber
+      );
+    }
   }
 });
 
@@ -51,19 +60,28 @@ document.getElementById("code").addEventListener("click", () => {
 document.getElementById("decode").addEventListener("click", () => {
   /*Definir Offset*/
   let offsetNumber = parseInt(document.getElementById("offset").value);
-  /*Input para ingresar mensaje a decodificar*/
-  startMessage = document.getElementById("messageStart").value;
-
-  if (startMessage == "") {
-    //Alerta para ingresar un mensaje a decodificar//
-    document.getElementById("errorMessageDecode").style = "display: block";
+  if (offsetNumber > 148 || offsetNumber < 1) {
+    document.getElementById("errorMessageOffset").style = "display: flex";
   } else {
-    /*Impresión del mensaje final en la textarea*/
-    /*Llamado a la función para decodificar el mensaje desde window*/
-    document.getElementById("messageEnd").value = window.cipher.decode(
-      startMessage,
-      offsetNumber
-    );
+    /*Input para ingresar mensaje a decodificar*/
+    startMessage = document.getElementById("messageStart").value;
+
+    if (startMessage == "") {
+      //Alerta para ingresar un mensaje a decodificar//
+      document.getElementById("errorMessageOffset").style = "display: none";
+      document.getElementById("errorMessageDecode").style = "display: block";
+      document.getElementById("errorMessageEncode").style = "display: none";
+    } else {
+      /*Impresión del mensaje final en la textarea*/
+      /*Llamado a la función para decodificar el mensaje desde window*/
+      document.getElementById("errorMessageOffset").style = "display: none";
+      document.getElementById("errorMessageDecode").style = "display: none";
+      document.getElementById("errorMessageEncode").style = "display: none";
+      document.getElementById("messageEnd").value = window.cipher.decode(
+        startMessage,
+        offsetNumber
+      );
+    }
   }
 });
 
