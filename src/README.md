@@ -70,7 +70,7 @@ Ayuda a sentirte más protegido en caso de que tu seguridad se esté viendo vuln
 
 ## Planificación, GitHub, Trello y Figma
 
-[Cifrado César_compressed (2).pdf](https://www.notion.so/12258bfbfee64a74a97092c1e4269325#e70c7ff0a18a4e189ab10da8bf66a943)
+[Cifrado César_compressed.pdf](https://www.notion.so/12258bfbfee64a74a97092c1e4269325#e70c7ff0a18a4e189ab10da8bf66a943)
 
 [DaniSalermi/SCL010-Cipher](https://github.com/DaniSalermi/SCL010-Cipher)
 
@@ -82,7 +82,7 @@ Ayuda a sentirte más protegido en caso de que tu seguridad se esté viendo vuln
 
 [A Complete Guide to Grid | CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
 
-[A Complete Guide to Grid | CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
+[A Complete Guide to Flexbox | CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 ### HTML
 

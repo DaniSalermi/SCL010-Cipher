@@ -202,7 +202,7 @@ header {
     opacity: 1;
   }
 }
-
+/*Animación para entrada de las instrucciones*/
 @keyframes upExit {
   0% {
     transform: translateY(5%);
