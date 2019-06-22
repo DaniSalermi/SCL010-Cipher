@@ -59,9 +59,9 @@ Ayuda a sentirte más protegido en caso de que tu seguridad se esté viendo vuln
 - [x] No utiliza `this`.
 - [x] Implementa `cipher.encode`.
 - [x] Implementa `cipher.decode`.
-- [ ] Pasa linter con configuración provista.
-- [ ] Pasa pruebas unitarias.
-- [ ] Pruebas unitarias cubren 70% de _statements_, _functions_ y _lines_, y un mínimo del 50% de _branches_.
+- [x] Pasa linter con configuración provista.
+- [x] Pasa pruebas unitarias.
+- [x] Pruebas unitarias cubren 70% de _statements_, _functions_ y _lines_, y un mínimo del 50% de _branches_.
 - [x] Interfaz permite elegir el `offset` o _desplazamiento_ a usar en el cifrado/descifrado.
 - [x] Interfaz permite escribir un texto para ser cifrado.
 - [x] Interfaz muestra el resultado del cifrado correctamente.
@@ -70,7 +70,7 @@ Ayuda a sentirte más protegido en caso de que tu seguridad se esté viendo vuln
 
 ## Planificación, GitHub, Trello y Figma
 
-[Cifrado César_compressed (2).pdf](https://www.notion.so/12258bfbfee64a74a97092c1e4269325#e70c7ff0a18a4e189ab10da8bf66a943)
+[Cifrado César_compressed.pdf](https://www.notion.so/12258bfbfee64a74a97092c1e4269325#e70c7ff0a18a4e189ab10da8bf66a943)
 
 [DaniSalermi/SCL010-Cipher](https://github.com/DaniSalermi/SCL010-Cipher)
 
@@ -82,7 +82,7 @@ Ayuda a sentirte más protegido en caso de que tu seguridad se esté viendo vuln
 
 [A Complete Guide to Grid | CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
 
-[A Complete Guide to Grid | CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
+[A Complete Guide to Flexbox | CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 ### HTML
 

@@ -89,6 +89,13 @@ header {
   grid-row-gap: 30px;
   align-items: center;
   margin-bottom: 60px;
+  animation: downEntry 0.5s 1 0s linear;
+  transition: all 0.3s linear;
+}
+
+.instructions img {
+  max-width: 50%;
+  margin-left: 25%;
 }
 
 .button {
@@ -134,6 +141,15 @@ header {
   text-align: center;
 }
 
+.errorMessageOffset {
+  font-size: 11px;
+  margin-top: -60px;
+  margin-bottom: 60px;
+  justify-content: flex-end;
+  margin-right: 300px;
+  color: #e74c3c;
+}
+
 .encryption {
   display: grid;
   grid-template-columns: 1fr 0.7fr 1fr;
@@ -154,6 +170,16 @@ header {
   border-radius: 12px;
 }
 
+.errorMessageEncode {
+  font-size: 11px;
+  color: #e74c3c;
+}
+
+.errorMessageDecode {
+  font-size: 11px;
+  color: #e74c3c;
+}
+
 .cipherButtons {
   display: flex;
   flex-direction: column;
@@ -164,4 +190,26 @@ header {
 .clearButton {
   display: flex;
   justify-content: space-evenly;
+}
+
+@keyframes downEntry {
+  0% {
+    transform: translateY(-5%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+/*Animación para entrada de las instrucciones*/
+@keyframes upExit {
+  0% {
+    transform: translateY(5%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 0;
+  }
 }
